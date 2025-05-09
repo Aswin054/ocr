@@ -1,8 +1,8 @@
 fastapi==0.95.2
 uvicorn==0.22.0
 python-multipart==0.0.6
-easyocr==1.6.2
-opencv-python-headless==4.7.0.72
+easyocr==1.6.2  # This requires opencv-python-headless<=4.5.4.60
+opencv-python-headless==4.5.4.60  # Downgraded to match easyocr's requirement
 torch==2.1.2
 torchvision==0.16.2
 numpy==1.24.3
