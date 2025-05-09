@@ -1,1 +1,2 @@
-Python 3.12.2
+# In runtime.txt
+python-3.9.16

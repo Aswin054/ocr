@@ -1,13 +1,31 @@
+# Core dependencies
 fastapi==0.95.2
 uvicorn==0.22.0
 python-multipart==0.0.6
-easyocr==1.6.2
-opencv-python-headless==4.5.4.60
+
+# Computer Vision
+opencv-python-headless==4.5.4.60  # Compatible with easyocr
+easyocr==1.6.2  # Locked to stable version
+
+# PyTorch (CPU-only for Render)
 torch==2.1.2 --index-url https://download.pytorch.org/whl/cpu
 torchvision==0.16.2 --index-url https://download.pytorch.org/whl/cpu
-numpy==1.24.3  # Explicitly set modern version
+
+# Numerics
+numpy==1.24.3  # Modern but compatible version
+scipy==1.10.1  # Often required by computer vision packages
+
+# Pydantic
 pydantic==1.10.7
-ultralytics==8.0.124
-python-dotenv==1.0.0
-gunicorn==20.1.0
 pydantic-settings==2.0.3
+
+# Additional utilities
+python-dotenv==1.0.0
+gunicorn==20.1.0  # Production server
+
+# YOLO
+ultralytics==8.0.124
+
+# Explicit dependency pins to prevent conflicts
+pillow==9.5.0  # Required by torchvision
+typing-extensions==4.5.0  # Required by pydantic
