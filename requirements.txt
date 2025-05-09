@@ -1,34 +1,15 @@
-# Core dependencies
 fastapi==0.95.2
 uvicorn==0.22.0
 python-multipart==0.0.6
-
-# Computer Vision
 opencv-python-headless==4.5.4.60
 easyocr==1.6.2
-
-# PyTorch (CPU-only for Render)
 torch==2.1.2+cpu
 torchvision==0.16.2+cpu
-# Use the official PyTorch CPU wheels for compatibility
-# You may need to add the extra index in your build command:
-# pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
-
-# Numerics
 numpy==1.24.3
 scipy==1.10.1
-
-# Pydantic
 pydantic==1.10.7
-pydantic-settings==2.0.3
-
-# Additional utilities
 python-dotenv==1.0.0
 gunicorn==20.1.0
-
-# YOLO
 ultralytics==8.0.124
-
-# Explicit dependency pins to prevent conflicts
 pillow==9.5.0
 typing-extensions==4.5.0
