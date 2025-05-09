@@ -1,22 +1,23 @@
-# Core
-fastapi==0.95.2
-uvicorn==0.22.0
-python-multipart==0.0.6
+# Web server
+fastapi==0.110.0
+uvicorn==0.29.0
+python-multipart==0.0.9
 
 # Computer Vision
-opencv-python-headless==4.5.4.58  # Slightly older but more stable
-easyocr==1.6.2
+opencv-python-headless==4.9.0.80  # 4.9+ supports Python 3.12
+easyocr==1.7.1  # tested for Python 3.12 with some backends
 
-# PyTorch
-torch==1.13.1+cpu --extra-index-url https://download.pytorch.org/whl/cpu
-torchvision==0.14.1+cpu --extra-index-url https://download.pytorch.org/whl/cpu
+# Torch (CPU only)
+torch==2.2.2+cpu
+torchvision==0.17.2+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
 
 # Numerics
-numpy==1.23.5  # ✅ Compatible with Python 3.9
+numpy==1.26.4  # latest stable, Python 3.12 compatible
 
 # Pydantic
-pydantic==1.10.7
-pydantic-settings==2.0.3
+pydantic==2.6.4
+pydantic-settings==2.2.1
 
-# Server
-gunicorn==20.1.0
+# Production Server
+gunicorn==21.2.0
